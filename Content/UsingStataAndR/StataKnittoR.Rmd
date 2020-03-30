@@ -7,20 +7,17 @@ output:
   pdf_document: default
   html_document: default
 ---
-
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(dpi=500,fig.align="center")
+knitr::opts_knit$set(dpi=500,fig.align="center")
 require(knitr)
-orca = "R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck"
 statapath <- "C:/Program Files (x86)/Stata15/StataSE-64"
-#opts_chunk$set(engine="stata", engine.path=statapath, comment="")
 ```
 
 
 ```{stata,engine.path=statapath, comment == "", echo = FALSE, collectcode = TRUE, results="hide"}
 qui{
- cd "R:\Transit Subsidy Income-Based Fares\PII\EnrollmentCheck"
- do "Enrollment Check.do"
+  cd "R:\Transit Subsidy Income-Based Fares\PII\EnrollmentCheck"
+  do "Enrollment Check.do"
 }
 
 ```
