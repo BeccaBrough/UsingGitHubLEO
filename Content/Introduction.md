@@ -34,4 +34,13 @@ git add "FolderName"
 ```
 git commit -m "Make a Note of what You Did"
 ```
-#### Commit Changes Back to GitHub
+#### 5. Commit Changes Back to GitHub
+```
+git push origin your-branch
+```
+
+You may need to set your origin as the correct online repo
+
+```
+git remote add origin url-to-repo
+```
