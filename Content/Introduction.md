@@ -3,6 +3,7 @@ output:
     code_fold: hide
     
 # GitHub
+{:toc}
 
 # Installation
 
