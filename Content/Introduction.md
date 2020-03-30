@@ -1,3 +1,11 @@
+---
+title: "Habits"
+output:
+  github_document:
+    toc: true
+    toc_depth: 2
+---
+
 ## Installation
 
 ## Sync Between Google Drive and Git
