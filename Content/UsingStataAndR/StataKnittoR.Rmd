@@ -18,10 +18,10 @@ statapath <- "C:/Program Files (x86)/Stata15/StataSE-64"
 
 
 ```{stata,engine.path=statapath, comment == "", echo = FALSE, collectcode = TRUE, results="hide"}
-#qui{
- # cd "R:\Transit Subsidy Income-Based Fares\PII\EnrollmentCheck"
-  #do "Enrollment Check.do"
-#}
+qui{
+ cd "R:\Transit Subsidy Income-Based Fares\PII\EnrollmentCheck"
+ do "Enrollment Check.do"
+}
 
 ```
 
