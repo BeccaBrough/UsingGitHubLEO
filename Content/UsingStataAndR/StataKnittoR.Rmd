@@ -1,0 +1,55 @@
+---
+title: "Low-Income Fares Enrollment Numbers"
+date: "March 26, 2020"
+output:
+  word_document: 
+    reference_docx: test_knit_template.docx
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dpi=500,fig.align="center")
+require(knitr)
+orca = "R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck"
+statapath <- "C:/Program Files (x86)/Stata15/StataSE-64"
+#opts_chunk$set(engine="stata", engine.path=statapath, comment="")
+```
+
+
+```{stata,engine.path=statapath, comment == "", echo = FALSE, collectcode = TRUE, results="hide"}
+#qui{
+ # cd "R:\Transit Subsidy Income-Based Fares\PII\EnrollmentCheck"
+  #do "Enrollment Check.do"
+#}
+
+```
+
+## Enrollment Plots 
+<center>
+![Graph 1](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/enrollment_bar.png){width=500px}
+</center>
+![Graph 1](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/cumulative_enrolled_line.png){width=500px}
+</center>
+
+##### Heading 5 
+## Intake Survey Questions 
+![Graph 2](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/change_in_services_bar.png){width=500px}
+![Graph 3](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/change_in_services_agg.png){width=500px}
+![Graph 4](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/cost_barrier_to_transit.png){width=500px}
+![Graph 5](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/mode_to_office.png){width=500px}
+![Graph 5](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/access_to_vehicle.png){width=500px}
+![Graph 5](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/publi_transit_past_30.png){width=500px}
+![Graph 6](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/payment_method.png){width=500px}
+![Graph 10](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/demand.png){width=500px}
+![Graph 16](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/Smartphone.png){width=500px}
+![Graph 17](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/TimelineOn.png){width=500px}
+
+##### Heading 5 
+## Comparing Responses Before and After March 3, 2020
+<center>
+![Graph 11](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/mode_to_office_pre_post.png){width=500px}
+</center>
+![Graph 12](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/demand_pre_post.png){width=500px}
+![Graph 13](R:/Transit Subsidy Income-Based Fares/PII/EnrollmentCheck/demand_pre_post_comb.png){width=500px}
+
