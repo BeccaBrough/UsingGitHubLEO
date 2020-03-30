@@ -5,8 +5,8 @@
 ### 1. Set up Project Reposity in GitHub  
 
 ### 2. Clone repository from GitHub to local computer
-#### 2.1 Open the git bash you installed. 
-#### 2.2 Use the following code to clone your respository in a LEO folder. 
+##### 2.1 Open the git bash you installed. 
+##### 2.2 Use the following code to clone your respository in a LEO folder. 
 ```
 cd /path/to/leo/folder/you/want/connected/to/github/
 git clone https://github.com/BeccaBrough/UsingGitHubLEO.git
