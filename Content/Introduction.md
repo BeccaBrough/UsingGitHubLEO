@@ -1,6 +1,6 @@
-# Installation
+## Installation
 
-# Sync Between Google Drive and Git
+## Sync Between Google Drive and Git
 
 #### 1. Set up Project Reposity in GitHub  
 #### 2. Clone repository from GitHub to local computer
