@@ -25,6 +25,7 @@ qui{
   do "Enrollment Check.do"
 }
 ```
+# Specifying Output 
 
 **Knit output:** You can output your RMarkdown file to 3 types of output documents: HTML, PDF, and Word. 
 - **Word**: To use word, I have found it easiest to start with a simple word template as a reference document. You can modify the style of this document, and simply reference this when you "knit" your Rmarkdown file. More information on this [here](https://rmarkdown.rstudio.com/articles_docx.html)  
