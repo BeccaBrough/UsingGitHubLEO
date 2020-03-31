@@ -47,6 +47,8 @@ git remote add origin url-to-repo
 - Do this when the repo on GitHub is more uptodate than your working version on your local computer
 - For example, if you work on your file directly in GitHub or if someone else updates GitHub
 ```
-pull remote-name (e.g. origin) branch-name (e.g. master)
+git pull remote-name (e.g. origin) branch-name (e.g. master)
 ```
-
+- Git Pull is a combination of two other Git commands, git fetch and git merge 
+- Git fetch: updates remote tracking branches
+- Git merge: updates the current branch (e.g. master) with the corresponding remote tracking branch  (e.g. origin)
