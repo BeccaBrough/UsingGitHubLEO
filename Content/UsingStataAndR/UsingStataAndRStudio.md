@@ -1,13 +1,14 @@
 # Using Stata and R Studio Tutorial
 
-**Summary:** This tutorial shows you how to use R Studio and Stata. R Studio is a nice interface that allows you to run R. Using R, you can create an RMarkdown file which allows you to run code in chuncks and describe what your doing in text. Something like this. This is a nice output, especially for sharing reports with partners.
+**Summary:** This tutorial shows you how to use R Studio and Stata. R Studio is a nice interface that allows you to run R. Using R, you can create an RMarkdown file which allows you to run code in chuncks and describe what your doing in text. Like this: 
 
-Here, I run code:
+I am running code.
 ```
 code 
 ```
 
-To run Stata in R, you simply have to change the reference engine RMarkdown calls. Example code below. In the RMarkdown file I upload [here](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/UsingStataAndR/StataKnittoR.Rmd), I run a do file at the top of the file. In this do file, I create lots of .png graphs. I then use Markdown language to call the .png graphs later on in the report. 
+# Changing Engine to Run Do File Through R
+To run Stata in RStudio, you simply have to change the reference engine RMarkdown calls. Example code below. In the RMarkdown file I upload [here](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/UsingStataAndR/StataKnittoR.Rmd), I run a do file at the top of the file. In this do file, I create lots of .png graphs. I then use Markdown language to call the .png graphs later on in the report. 
 
 First, you create an object that represents where your stata is stored.
 
