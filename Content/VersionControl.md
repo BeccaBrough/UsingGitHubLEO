@@ -47,6 +47,6 @@ git remote add origin url-to-repo
 - Do this when the repo on GitHub is more uptodate than your working version on your local computer
 - For example, if you work on your file directly in GitHub or if someone else updates GitHub
 ```
-pull REMOTE-NAME (origin) BRANCH-NAME (master)
+pull remote-name (e.g. origin) branch-name (e.g. master)
 ```
 
