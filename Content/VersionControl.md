@@ -44,6 +44,8 @@ You may need to set your origin as the correct online repo
 git remote add origin url-to-repo
 ```
 #### 6. Update Local Drive with Most Recent GitHub
+- Do this when the repo on GitHub is more uptodate than your working version on your local computer
+- For example, if you work on your file directly in GitHub or if someone else updates GitHub
 ```
 pull REMOTE-NAME (origin) BRANCH-NAME (master)
 ```
