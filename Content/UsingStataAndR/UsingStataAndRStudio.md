@@ -7,7 +7,9 @@ Here, I run code:
 code 
 ```
 
-To run Stata in R, you simply have to change the reference engine RMarkdown calls. Example code below. In the RMarkdown file I upload here, I run a do file at the top of the file. In this do file, I create lots of .png graphs. I then use Markdown language to call the .png graphs later on in the report. First, you create an object that represents where your stata is stored.
+To run Stata in R, you simply have to change the reference engine RMarkdown calls. Example code below. In the RMarkdown file I upload [here](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/UsingStataAndR/StataKnittoR.Rmd), I run a do file at the top of the file. In this do file, I create lots of .png graphs. I then use Markdown language to call the .png graphs later on in the report. 
+
+First, you create an object that represents where your stata is stored.
 
 ```
 statapath <- "C:/Program Files (x86)/Stata15/StataSE-64"
