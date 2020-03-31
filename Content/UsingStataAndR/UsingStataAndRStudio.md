@@ -16,9 +16,14 @@ First, you create an object that represents where your stata is stored.
 statapath <- "C:/Program Files (x86)/Stata15/StataSE-64"
 ```
 Then, at the top of each code chuck, you reference the engine stata. As shown below.
-```
-{stata,engine.path=statapath}
-```
+
+`{stata,engine.path=statapath, comment == "", echo = FALSE, collectcode = TRUE, results="hide"}
+qui{
+  cd "R:\Transit Subsidy Income-Based Fares\PII\EnrollmentCheck"
+  do "Enrollment Check.do"
+}
+
+`
 
 **Knit output:** You can output your RMarkdown file to 3 types of output documents: HTML, PDF, and Word. 
 - **Word**: To use word, I have found it easiest to start with a simple word template as a reference document. You can modify the style of this document, and simply reference this when you "knit" your Rmarkdown file. More information on this [here](https://rmarkdown.rstudio.com/articles_docx.html)  
