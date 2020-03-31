@@ -16,7 +16,9 @@ First, you create an object that represents where your stata is stored.
 statapath <- "C:/Program Files (x86)/Stata15/StataSE-64"
 ```
 Then, at the top of each code chuck you reference the engine stata using the following. You can then run your do file. E.G.
+```
 {stata,engine.path=statapath} 
+```
 ```{stata,engine.path=statapath, comment == "", echo = FALSE, collectcode = TRUE, results="hide"}
 qui{
   cd "R:\Transit Subsidy Income-Based Fares\PII\EnrollmentCheck"
