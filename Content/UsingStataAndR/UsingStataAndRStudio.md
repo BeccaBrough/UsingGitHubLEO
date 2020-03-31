@@ -7,6 +7,10 @@ Here, I run code:
 code 
 ```
 
+To run Stata in R, you simply have to change the reference engine RMarkdown calls. Example code below. In the RMarkdown file I upload here, I run a do file at the top of the file. In this do file, I create lots of .png graphs. I then use Markdown language to call the .png graphs later on in the report. 
+```
+```
+
 **Knit output:** You can output your RMarkdown file to 3 types of output documents: HTML, PDF, and Word. 
 - **Word**: To use word, I have found it easiest to start with a simple word template as a reference document. You can modify the style of this document, and simply reference this when you "knit" your Rmarkdown file. More information on this [here](https://rmarkdown.rstudio.com/articles_docx.html)  
 - **HTML**: Pretty straightforward, knits to a HTML document that appears like a website when you open it. 
