@@ -8,7 +8,19 @@ code
 ```
 
 To run Stata in R, you simply have to change the reference engine RMarkdown calls. Example code below. In the RMarkdown file I upload here, I run a do file at the top of the file. In this do file, I create lots of .png graphs. I then use Markdown language to call the .png graphs later on in the report. 
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(dpi=500,fig.align="center")
+require(knitr)
+statapath <- "C:/Program Files (x86)/Stata15/StataSE-64"
 ```
+
+
+```{stata,engine.path=statapath, comment == "", echo = FALSE, collectcode = TRUE, results="hide"}
+qui{
+  cd "R:\Transit Subsidy Income-Based Fares\PII\EnrollmentCheck"
+  do "Enrollment Check.do"
+}
 ```
 
 **Knit output:** You can output your RMarkdown file to 3 types of output documents: HTML, PDF, and Word. 
