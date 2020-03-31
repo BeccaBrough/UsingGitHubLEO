@@ -1,8 +1,8 @@
-## Installation
-# 1. Download Github Bash
+# Installation
+## 1. Download Github Bash
 
-# 2. 
+## 2. 
 
-# 3. Optional Downloads 
+## 3. Optional Downloads 
 - GitHub Desktop
 - 
