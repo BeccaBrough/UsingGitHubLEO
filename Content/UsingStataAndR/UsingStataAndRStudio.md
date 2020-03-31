@@ -8,7 +8,7 @@ code
 ```
 
 **Knit output:** There are 3 output documents: HTML, PDF, and Word. 
-- **word**: To use word, you should create a word template as a reference document. 
+- **Word**: To use word, you should create a word template as a reference document. 
 - **HTML**:
 - **PDF**:
 
