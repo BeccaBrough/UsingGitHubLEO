@@ -9,6 +9,12 @@
 cd /path/to/leo/folder/you/want/connected/to/github/
 git clone https://github.com/BeccaBrough/UsingGitHubLEO.git
 ```
+- If you have folders in Google drive you want to sync to GitHub, then you must initiate them as git folders
+
+```
+cd /path/to/leo/folder/you/want/connected/to/github/
+git init
+```
 
 #### 3. Make changes to files 
 - Make edits, changes, etc. 
