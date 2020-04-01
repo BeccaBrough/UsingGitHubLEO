@@ -2,13 +2,15 @@
 
 #### 1. Set up Project Reposity in GitHub  
 
-#### 2. Clone repository from GitHub to local computer
+#### 1. Connect respository to local computer
+##### 1.2 Option 1:  Set up Project Reposity in GitHub  and Clone to Local computer 
 - Open the git bash you installed. 
 - Use the following code to clone your respository in a LEO folder. 
 ```
 cd /path/to/leo/folder/you/want/connected/to/github/
 git clone https://github.com/BeccaBrough/UsingGitHubLEO.git
 ```
+##### 1.2 Option 2:  Initiate a local folder on computer as a GitHub repository 
 - If you have folders in Google drive you want to sync to GitHub, then you must initiate them as git folders
 
 ```
