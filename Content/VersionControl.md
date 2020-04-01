@@ -1,16 +1,14 @@
 ## Sync Versions Between Google Drive and Git
 
-#### 1. Set up Project Reposity in GitHub  
-
 #### 1. Connect respository to local computer
-##### 1.2 Option 1:  Set up Project Reposity in GitHub  and Clone to Local computer 
+##### Option 1:  Set up Project Reposity in GitHub  and Clone to Local computer 
 - Open the git bash you installed. 
 - Use the following code to clone your respository in a LEO folder. 
 ```
 cd /path/to/leo/folder/you/want/connected/to/github/
 git clone https://github.com/BeccaBrough/UsingGitHubLEO.git
 ```
-##### 1.2 Option 2:  Initiate a local folder on computer as a GitHub repository 
+##### Option 2:  Initiate a local folder on computer as a GitHub repository 
 - If you have folders in Google drive you want to sync to GitHub, then you must initiate them as git folders
 
 ```
@@ -18,11 +16,11 @@ cd /path/to/leo/folder/you/want/connected/to/github/
 git init
 ```
 
-#### 3. Make changes to files 
+#### 2. Make changes to files 
 - Make edits, changes, etc. 
 - Save files using the same name (no V1, V2) 
 
-#### 4. Identify Files that Need to be synced back to GitHub
+#### 3. Identify Files that Need to be synced back to GitHub
 - Open Git Bash
 - Display all files that you've made changes to
 ```
