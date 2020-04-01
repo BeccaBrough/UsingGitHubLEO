@@ -8,7 +8,7 @@ git branch new_branch
 ```
 
 #### 2. Switch to the new branch. 
-At this point, you've only created a new branch. You are still in the branch you originally started in. Switch branches by running the following. Confirm you've sucessfully switched branches by checking the status. 
+At this point, you've only created a new branch. You are still in the branch you originally started in. Switch branches by running the following. Confirm you've successfully switched branches by checking the status. 
 ```
 git checkout new_branch
 git status
