@@ -1,8 +1,15 @@
+# GitHub Summary: 
+GitHub allows users to create online repositories that host code, writing, datasets, and build websites. GitHub allows users to share their code privately with team members as well as with the broader public. Lastly, GitHub is great for tracking version control (both with yourself and with other team members).
+
 # Installation
 ## 1. Download Github Bash
+Windows: 
+1. Download git [here](https://git-scm.com/download/win)
 
-## 2. 
-
-## 3. Optional Downloads 
-- GitHub Desktop
-- 
+Mac: 
+1. From the terminal, run the following
+```
+xcode-select --install
+```
+## 2. Optional Downloads 
+- GitHub Desktop [here](https://desktop.github.com/)
