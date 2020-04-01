@@ -22,7 +22,7 @@ git push origin new_branch
 ```
 
 #### 4. Compare any changes and Add to Master File 
-Now, the online repo has two branches. The master branch and the new_branch. From the website, you can compare these two branches to see what changes exist between the two. If other have been working on a separate branch and merged those changed to the master file, you will see both the changes you've made on your branch as well as the new additions in the master file. 
+Now, the online repo has two branches. The master branch and the new_branch. From the website, you can compare these two branches to see what changes exist between the two. If others have been working on a separate branch and merged those changed to the master file, you will see both the changes you've made on your branch as well as the new additions in the master file. 
 
 Once you're happy with your merge, you can create a pull request to add your changes to the master file. At this stage you can add reviewers and notes. This way, others can check on your newly added code. 
 
