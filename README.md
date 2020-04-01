@@ -9,3 +9,4 @@ Section pieces are as follows:
 4. [Misc: Markdown](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/Markdown.md)
 5. [Misc: Web Scraping](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/WebScraping)
 6. [Misc: Using Stata in R](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/UsingStataAndR)
+7. Misc: Writing PDFs from CSV
