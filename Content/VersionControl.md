@@ -2,6 +2,7 @@
 
 #### 1. Connect respository to local computer
 ##### Option 1:  Set up Project Reposity in GitHub  and Clone to Local computer 
+- Create a repo from GitHub's website interface
 - Open the git bash you installed. 
 - Use the following code to clone your respository in a LEO folder. 
 ```
