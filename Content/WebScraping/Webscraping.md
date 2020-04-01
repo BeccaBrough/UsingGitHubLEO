@@ -1,4 +1,4 @@
-# Overview of Webscraping Project for KC Court Appearance Project 
+## Overview of Webscraping Project for KC Court Appearance Project 
 
 **Summary:** This project uses publicly available records from Seattle Municipal Court to identify clients who are eligible to receive transit cards. This README file serves only to explain to use of webscraping in this project. Below, I discuss general tips and resources I found useful when writing this code. This project uses Python.
 
