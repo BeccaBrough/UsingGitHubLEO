@@ -1,7 +1,7 @@
 # GitHub Summary: 
 GitHub allows users to create online repositories that host code, writing, datasets, and build websites. GitHub allows users to share their code privately with team members as well as with the broader public. Lastly, GitHub is great for tracking version control (both with yourself and with other team members).
 
-# Installation
+# Installation:
 ## 1. Download Github Bash
 Windows: 
 1. Download git [here](https://git-scm.com/download/win)
