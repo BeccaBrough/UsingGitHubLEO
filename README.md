@@ -25,7 +25,7 @@ Section pieces are as follows:
 8. [Misc: Markdown Resources](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/Markdown.md)<br>
 *Provides an overview of Markdown (GitHub's default language) and provides resources for additional Markdown Information*<br/>
 
-9. [Misc: Web Scraping](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/WebScraping)<br>
+9. [Misc: Code for LEO Projects](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/WebScraping)<br>
 *An example of code the LEO team may want to share with each other*<br/>
 
 10. [Misc: Using Stata in R](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/UsingStataAndR)<br>
