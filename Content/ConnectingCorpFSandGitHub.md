@@ -49,3 +49,7 @@ git commit -m "Adding Existing Folder to GitHub"
 git remote add origin url-to-repo
 git push -f origin master 
 ```
+
+### 2.4 More Resources 
+If you are connecting an code folder to GitHub for the first time and would like to know how to convert your files named "code_v1" "code_v2", etc. into a single file while preserving all these variatons, read this guide.
+
