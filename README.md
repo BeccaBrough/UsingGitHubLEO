@@ -19,14 +19,17 @@ Section pieces are as follows:
 6. Privacy Considerations<br>
 *Things to consider when using GitHub*<br/>
 
-7. [Misc: Markdown](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/Markdown.md)<br>
+7. [Misc: Useful GitHub Resources](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/Markdown.md)<br>
 *Provides an overview of Markdown (GitHub's default language) and provides resources for additional Markdown Information*<br/>
 
-8. [Misc: Web Scraping](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/WebScraping)<br>
+8. [Misc: Markdown Resources](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/Markdown.md)<br>
+*Provides an overview of Markdown (GitHub's default language) and provides resources for additional Markdown Information*<br/>
+
+9. [Misc: Web Scraping](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/WebScraping)<br>
 *An example of code the LEO team may want to share with each other*<br/>
 
-9. [Misc: Using Stata in R](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/UsingStataAndR)<br>
+10. [Misc: Using Stata in R](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/UsingStataAndR)<br>
 *An example of code the LEO team may want to share with each other*<br/>
 
-10. Misc: Writing PDFs from CSV<br>
+11. Misc: Writing PDFs from CSV<br>
 *An example of code the LEO team may want to share with each other*<br/>
