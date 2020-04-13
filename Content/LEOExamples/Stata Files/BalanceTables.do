@@ -11,11 +11,11 @@
 	*ssc install ietoolkit, only install once
 	
  * - Create Random Dataset with randomly assigned values 
-	set obs 300
-	gen today = date(c(current_date),"DMY")
 	
 	qui{
 	local vars "treatment gender age office enrollment_date"
+	set obs 300
+	gen today = date(c(current_date),"DMY")
 	loc y 1
 	foreach x of local vars { 
 	gen rand`y' = uniform()
