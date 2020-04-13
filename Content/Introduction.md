@@ -13,3 +13,5 @@ xcode-select --install
 ```
 ## 2. Optional Downloads 
 - GitHub Desktop [here](https://desktop.github.com/)
+
+# Link your GitHub Account to your Git Bash 
