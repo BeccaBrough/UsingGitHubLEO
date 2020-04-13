@@ -1,0 +1,44 @@
+#### 1. Connect CorpFS and GitHub
+- Please follow instructions in here, if you have not already 
+#### 2. Make changes to files 
+- Make edits, changes, etc. 
+- Save files using the same name (no V1, V2) 
+
+#### 3. Identify Files that Need to be synced back to GitHub
+- Open Git Bash
+- Display all files that you've made changes to
+```
+cd /path/to/leo/folder/you/made/changes/to/ (should be same folder as in step 2.2)
+git status 
+```
+#### 4. Commit Changes Back to GitHub
+- Syncing Files 
+```
+# To Sync Entire Folder
+git add . 
+# To Sync Certain Files:
+git add "FolderName" 
+```
+- Commit files 
+```
+git commit -m "Make a Note of what You Did"
+```
+#### 5. Commit Changes Back to GitHub
+```
+git push origin your-branch
+```
+
+You will need to set your origin as the correct online repository. You can find the URL by copying the URL found in the "Clone or Download" button in the top right of your 
+
+```
+git remote add origin url-to-repo
+```
+#### 6. Update Local Drive with Most Recent GitHub
+- Do this when the repo on GitHub is more uptodate than your working version on your local computer
+- For example, if you work on your file directly in GitHub or if someone else updates GitHub
+```
+git pull remote-name (e.g. origin) branch-name (e.g. master)
+```
+- Git Pull is a combination of two other Git commands, git fetch and git merge 
+- Git fetch: updates remote tracking branches
+- Git merge: updates the current branch (e.g. master) with the corresponding remote tracking branch  (e.g. origin)
