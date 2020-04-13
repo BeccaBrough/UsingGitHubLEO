@@ -1,61 +1,51 @@
-## Sync Versions Between Google Drive and GitHub
+## Connecting CorpFS and GitHub
 
-#### 1. Connect respository to local computer
-##### Option 1:  Set up Project Reposity in GitHub  and Clone to Local computer 
-- Create a repo from GitHub's website interface
-- Open the git bash you installed. 
+### Step 1. Set up Project Reposity in GitHub
+- Create a repo from GitHub's website interface; click the plus button in the upper right corner of the GitHub homepage and click "Create Repository"
+- Select features for this reposity 
+- Create a README file on the home page; README files should tell the user key information about the files uploaded in that repo.
+
+### Option 1. Connect Existing GitHub respository to local computer
+- This option makes sense for new projects and new project folders. If you would like to migrate existing code to GitHub, then please read the instructions for Option 2. 
+
+#### 1.1. Clone Online Repository to Local Computer 
+- Open the git bash you installed; 
 - Use the following code to clone your respository in a LEO folder. 
+- Find the correct url-to-repo by clicking the "Clone or Download" button on the homepage of your repository
 ```
 cd /path/to/leo/folder/you/want/connected/to/github/
-git clone https://github.com/BeccaBrough/UsingGitHubLEO.git
+git clone url-to-repo (e.g. https://github.com/BeccaBrough/UsingGitHubLEO.git)
 ```
-##### Option 2:  Initiate a local folder on computer as a GitHub repository 
-- If you have folders in Google drive you want to sync to GitHub, then you must initiate them as git folders
+### Option 2:  Connect Existing Folder in CorpFS to Repos in GitHub
 
+- This option is best for existing projects that already have files stored in CorpFS 
+
+#### 2.1 Initiate this existing folder as a GitHub folder 
+- You can tell Git that you want this folder to be synced to GitHub with the following code 
 ```
 cd /path/to/leo/folder/you/want/connected/to/github/
 git init
 ```
 
-#### 2. Make changes to files 
-- Make edits, changes, etc. 
-- Save files using the same name (no V1, V2) 
-
-#### 3. Identify Files that Need to be synced back to GitHub
-- Open Git Bash
-- Display all files that you've made changes to
+#### 2.2 Choose files from newly initiated folder you would like synced with GitHub
+- Use the following code to upload existing files to 
 ```
-cd /path/to/leo/folder/you/made/changes/to/ (should be same folder as in step 2.2)
-git status 
+git add . (or git add "FILENAME" to only add specific files)
 ```
-#### 4. Commit Changes Back to GitHub
-- Syncing Files 
+#### Troubleshooting
+When I first did this, I received the following error 
+*"Fatal: cannot use .git/info/exclude as an exclude file"* 
+If you receive this error, the following steps resolve this 
+##### 1. Delete These exclude files 
+Navigate to .git/info/ and delete the "exclude" file 
+##### 2. Change your configuration to ignore exclude files 
+Run the following in the command prompt: 
 ```
-# To Sync Entire Folder
-git add . 
-# To Sync Certain Files:
-git add "FolderName" 
+git config --global core.fsache false 
 ```
-- Commit files 
+### 2.3 Add these selected files to online GitHub repo
 ```
-git commit -m "Make a Note of what You Did"
-```
-#### 5. Commit Changes Back to GitHub
-```
-git push origin your-branch
-```
-
-You may need to set your origin as the correct online repo
-
-```
+git commit -m "Adding Existing Folder to GitHub"
 git remote add origin url-to-repo
+git push -f origin master 
 ```
-#### 6. Update Local Drive with Most Recent GitHub
-- Do this when the repo on GitHub is more uptodate than your working version on your local computer
-- For example, if you work on your file directly in GitHub or if someone else updates GitHub
-```
-git pull remote-name (e.g. origin) branch-name (e.g. master)
-```
-- Git Pull is a combination of two other Git commands, git fetch and git merge 
-- Git fetch: updates remote tracking branches
-- Git merge: updates the current branch (e.g. master) with the corresponding remote tracking branch  (e.g. origin)
