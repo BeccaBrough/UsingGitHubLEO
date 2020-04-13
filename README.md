@@ -6,7 +6,8 @@ Section pieces are as follows:
 1. [Introduction](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/Introduction.md)
 2. [Version Control](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/VersionControl.md)
 3. [Collaboration with other users](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/Collaboration.md)
-4. [Misc: Markdown](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/Markdown.md)
-5. [Misc: Web Scraping](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/WebScraping)
-6. [Misc: Using Stata in R](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/UsingStataAndR)
-7. Misc: Writing PDFs from CSV
+4. Privacy Considerations
+5. [Misc: Markdown](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/Markdown.md)
+6. [Misc: Web Scraping](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/WebScraping)
+7. [Misc: Using Stata in R](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/UsingStataAndR)
+8. Misc: Writing PDFs from CSV
