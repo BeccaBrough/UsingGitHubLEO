@@ -4,7 +4,7 @@ This guide introduces the user to GitHub and to ways GitHub can be used in LEO P
 
 Section pieces are as follows: 
 1. [Introduction](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/1.Introduction.md)<br>
-*Describes how to download, and configure GitHub*<br/>
+*Describes how to download and configure GitHub*<br/>
 
 2. [Connecting CorpFS and GitHub](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/2.ConnectingCorpFSandGitHub.md.md)<br>
 *Describes how to link projects created in GitHub to CorpFS, and conversely, how to link existing projects in CorpFS to GitHub*<br/>
