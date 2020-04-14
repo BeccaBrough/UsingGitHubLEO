@@ -19,7 +19,7 @@ Section pieces are as follows:
 6. Privacy Considerations<br>
 *Things to consider when using GitHub*<br/>
 
-8. [Misc: Additional Resources on GitHub and Markdown](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/Markdown.md)<br>
+8. [Misc: Additional Resources on GitHub and Markdown](https://github.com/BeccaBrough/UsingGitHubLEO/blob/master/Content/6.Other%20Resources.md)<br>
 *Provides additional resources for GitHub and Markdown (GitHub's default language)*<br/>
 
 9. [Misc: Code for LEO Projects](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/WebScraping)<br>
