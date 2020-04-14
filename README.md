@@ -23,5 +23,5 @@ Things to consider when using GitHub<br/>
 Provides additional resources for GitHub and Markdown (GitHub's default language)<br/>
 
 9. [Misc: Code for LEO Projects](https://github.com/BeccaBrough/UsingGitHubLEO/tree/master/Content/LEOExamples)<br>
-Examples of code the LEO team may want to share with each other<br/>
+Examples of code the LEO team may want to share<br/>
 
