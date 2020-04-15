@@ -23,7 +23,7 @@
  
  * - Set Treatment Control 
  	* Randomization Ratio 50-50; treatment and control group
-	gen treat = percentil <= 0.5
+	gen treat = percentile <= 0.5
 	*Randomization Ratio 50-30-20; 1 control and 2 treatment groups
 	*gen treat = cond(percentile <=0.5,0,cond(percentile<=0.8,1,2))
 
