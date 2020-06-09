@@ -1,0 +1,108 @@
+****************************************************************
+* Example of Stratification Do File 
+*** Modified Example from PMP Project
+*** Stratified by Zip Codes and Grade  
+****************************************************************
+clear all
+
+** Set local to 1 to generate empty stratification lists; after running once, you can set this to 0
+loc run1 1 
+loc zips "10001,10005,10007"
+
+** Gererate a seed! 
+set seed 579820636 
+
+* - Section 1
+	* Create Stratified Lists 
+	* Assign 1050 people in each grade-zip pair
+	* Randomize in blocks of 6 (50%; 3-3)
+		** Can change ratio, eg 50-20-30 (blocks of 10, 1 2 3 4 5 == Treatment; 6 7 8 == Treatment 2; 9 10 == Treatment 3)
+
+if `run1' == 1 {
+* - Strata 1 
+
+  * - Generate a blank dataset for all values in strata 1 [zip code]
+  ** If doing something like zip codes; the following is the easiest 
+	set obs 2000 
+      * Generate zips 
+	  gen start_zip = 10000
+      gen zip = 10000 + _n - 1 
+	  
+      * Only Keep zips in NYC 
+      keep if inlist(zip, `zips')
+
+* - Strata 2 
+	* - Generate a var to represent the first value of the strata 2 (grades)
+		gen start_grade = 2 
+
+    * - Expand dataset by # of values in strata 2 (here, we have grades 2, 3, 4, 5, 6, 7 , 8 = 7 new groups )
+		expand 7
+    
+    * - Generate a grade variable 
+		bys zip: gen grade = start_grade + _n - 1
+
+* - Expand by the # of Observations you want to randomize for each zip-code grade pair 
+		expand 1050
+    
+    
+ * - Block Randomization; Stratify in groups of #; This way, each zip-grade strata will be balanced for every # obs. Below, we do this in blocks of 6.
+    * - Create Blocks 
+		bys zip grade: gen count = _n 
+		gen block_id = ceil(count/6)
+		gsort zip grade +block_id 
+		bys zip grade: gen rand_id = _n
+    
+ * - Assign Treatment; by zip-grade in blocks
+	
+	* - Assign Treatment within zip-grade-block
+		gen rand = uniform()
+		gsort zip grade block_id rand
+		bys zip grade block_id: gen rank = _n 
+		gen treatment = rank < 4 
+
+		drop start_zip start_grade
+		gsort zip grade block_id +rand_id
+    
+ * - Save Files 
+ 
+	* - Save a data file that the is the original empty strata list (in this eg, I'll use a tempfile)
+		gsort zip grade block_id +rand_id 
+		keep zip grade rand block_id rand_id treatment
+		destring zip grade, replace force 
+		*save stratification_list.dta,replace 
+		tempfile strata
+		save `strata'
+		}
+	
+
+* - Take your enrollment data; assign each obs a "rand_id" based on stratification vars and submission order
+** For illustrative purposes, I create a random dataset. 
+*** This should  EG; I create a fake enrollment file. 
+  clear 
+  set obs 100
+  gen zip = 10001 if _n/_N < 0.333
+  replace zip = 10005 if _n/_N < 0.667 & _n/_N >= 0.333
+  replace zip = 10007 if zip == . 
+  
+  gen rand = uniform()
+  bys zip: gen grade = 2 + floor(rand*7)
+  
+  gen submission_order = uniform()
+  gsort zip grade +submission_order 
+  bys zip grade: gen rand_id = _n 
+  
+  keep zip grade rand_id submission_order 
+
+* -  As people enroll; assign then a rand_id based on zip code and grade 
+	mmerge zip grade rand_id using `strata'
+	** Make sure everyone was randomized
+		count if _merge == 1 
+		assert `r(N)' == 0 
+		
+	** Keep randomized folks 
+		keep if _merge == 3 
+	
+	** Your new randomized list!
+		* save randomized_list.dta, replace 
+
+	
