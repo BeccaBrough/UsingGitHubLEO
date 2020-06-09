@@ -9,7 +9,7 @@ clear all
 loc run1 1 
 loc zips "10001,10005,10007"
 
-** Gererate a seed! 
+** Set a seed
 set seed 579820636 
 
 * - Section 1
@@ -104,5 +104,3 @@ if `run1' == 1 {
 	
 	** Your new randomized list!
 		* save randomized_list.dta, replace 
-
-	
