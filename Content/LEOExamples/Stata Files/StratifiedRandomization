@@ -1,28 +1,33 @@
-****************************************************************
-* Example of Stratification Do File 
-*** Modified Example from PMP Project
-*** Stratified by Zip Codes and Grade  
-****************************************************************
-clear all
+*==============================================================================*
+* Example of Stratified Randomization 
+* Author: BB 
+* Date: 2020-06-09
+	* Based on Code written in PMP Project
+	* This example stratifies by Zip Codes and Grade; can apply technique for more
+	** (fewer) strata
+*==============================================================================*
 
-** Set local to 1 to generate empty stratification lists; after running once, you can set this to 0
+
+clear all
+** Set local to 1 to generate empty stratification lists
+** After running once, you can set this to 0
 loc run1 1 
 loc zips "10001,10005,10007"
 
-** Set a seed
+** Always set the seed
 set seed 579820636 
 
 * - Section 1
 	* Create Stratified Lists 
 	* Assign 1050 people in each grade-zip pair
 	* Randomize in blocks of 6 (50%; 3-3)
-		** Can change ratio, eg 50-30-20 (blocks of 10, 1 2 3 4 5 == Treatment; 6 7 8 == Treatment 2; 9 10 == Treatment 3)
+		** Can change ratio, eg 50-30-20; set block size == 10, 
+		** (rank = 1 2 3 4 5 = treat 1; rank = 6 7 8 = treat 2; rank = 9 10 = treat 3)
 
 if `run1' == 1 {
 * - Strata 1 
 
   * - Generate a blank dataset for all values in strata 1 [zip code]
-  ** If doing something like zip codes; the following is the easiest 
 	set obs 2000 
       * Generate zips 
 	  gen start_zip = 10000
@@ -42,10 +47,17 @@ if `run1' == 1 {
 		bys zip: gen grade = start_grade + _n - 1
 
 * - Expand by the # of Observations you want to randomize for each zip-code grade pair 
+	** Want to set this # to something larger than you would think you need. 
+	
+	** Make this # divisible by the # of obs per block you want (eg, 1050/6 = 175)
+	
 		expand 1050
+		
     
-    
- * - Block Randomization; Stratify in groups of #; This way, each zip-grade strata will be balanced for every # obs. Below, we do this in blocks of 6.
+ * - Block Randomization; Stratify in groups of #
+	** This way, each zip-grade strata will be balanced for every # obs. 
+	** Below, we do this in blocks of 6.
+	
     * - Create Blocks 
 		bys zip grade: gen count = _n 
 		gen block_id = ceil(count/6)
@@ -76,33 +88,37 @@ if `run1' == 1 {
 		save `strata'
 		}
 	
+* - Section 2
+	* - Take your enrollment data; assign each obs a "rand_id" based on stratification vars and submission order
+	** For illustrative purposes, I create a random enrollment dataset. 
+ 
+	  clear 
+	  set obs 100
+	  gen zip = 10001 if _n/_N < 0.333
+		  replace zip = 10005 if _n/_N < 0.667 & _n/_N >= 0.333
+		  replace zip = 10007 if zip == . 
+	  
+	  gen rand = uniform()
+	  bys zip: gen grade = 2 + floor(rand*7)
+	  
+	  gen submission_order = uniform()
+	  
+	  * - Assign rand_id by order of enrollment 
+		  gsort zip grade +submission_order 
+		  bys zip grade: gen rand_id = _n 
+	  
+	keep zip grade rand_id submission_order 
 
-* - Take your enrollment data; assign each obs a "rand_id" based on stratification vars and submission order
-** For illustrative purposes, I create a random dataset. 
-*** This should  EG; I create a fake enrollment file. 
-  clear 
-  set obs 100
-  gen zip = 10001 if _n/_N < 0.333
-  replace zip = 10005 if _n/_N < 0.667 & _n/_N >= 0.333
-  replace zip = 10007 if zip == . 
-  
-  gen rand = uniform()
-  bys zip: gen grade = 2 + floor(rand*7)
-  
-  gen submission_order = uniform()
-  gsort zip grade +submission_order 
-  bys zip grade: gen rand_id = _n 
-  
-  keep zip grade rand_id submission_order 
-
-* -  As people enroll; assign then a rand_id based on zip code and grade 
-	mmerge zip grade rand_id using `strata'
-	** Make sure everyone was randomized
-		count if _merge == 1 
-		assert `r(N)' == 0 
+* - Section 3 
+	* - Merge Enrollment Data to Stratification List 
+		mmerge zip grade rand_id using `strata'
 		
-	** Keep randomized folks 
-		keep if _merge == 3 
-	
-	** Your new randomized list!
-		* save randomized_list.dta, replace 
+		** Make sure everyone is randomized 
+			count if _merge == 1 
+			assert `r(N)' == 0 
+			
+		** Keep randomized folks 
+			keep if _merge == 3 
+		
+		** Your new randomized list!
+			* save randomized_list.dta, replace 
